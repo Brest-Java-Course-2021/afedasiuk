@@ -20,28 +20,29 @@ public class PriceSelectorTest {
     @Test
     public void selectPriceMediumValue() {
 
-        BigDecimal result = priceSelector.selectPriceValue(values, new BigInteger("2"));
+        BigDecimal result = priceSelector.selectPriceValue(values, new BigDecimal(2));
         assertTrue("Result value is incorrect", result.equals(new BigDecimal(200)));
     }
 
     @Test
     public void selectPriceZeroValue() {
 
-        BigDecimal result = priceSelector.selectPriceValue(values, new BigInteger("0"));
+        BigDecimal result = priceSelector.selectPriceValue(values, new BigDecimal(0));
         assertTrue("Result value is incorrect", result.equals(new BigDecimal(100)));
     }
 
     @Test
     public void selectPriceMaxValue() {
 
-        BigDecimal result = priceSelector.selectPriceValue(values, new BigInteger("4"));
+        BigDecimal result = priceSelector.selectPriceValue(values, new BigDecimal(4
+        ));
         assertTrue("Result value is incorrect", result.equals(new BigDecimal(300)));
     }
 
     @Test
     public void selectPriceIncorrectValue() {
 
-        BigDecimal result = priceSelector.selectPriceValue(values, new BigInteger("-1"));
+        BigDecimal result = priceSelector.selectPriceValue(values, new BigDecimal("-1"));
         assertTrue("Result value is incorrect", result.equals(new BigDecimal(100)));
     }
 }
