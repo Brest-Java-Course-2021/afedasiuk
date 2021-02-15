@@ -20,6 +20,5 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - working-directory: price-calc
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: cd ./price-calc; mvn -B package --file pom.xml
