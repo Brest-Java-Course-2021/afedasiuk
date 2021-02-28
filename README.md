@@ -43,3 +43,41 @@ To stop it and remove the container, run:
 ```
 docker-compose -f docker/oraclexe.yml down
 ```
+
+
+## MySQL
+
+```
+docker-compose -f docker/mysql.yml up -d
+```
+
+To stop it and remove the container, run:
+
+```
+docker-compose -f docker/mysql.yml down
+```
+
+
+## MySQL Workbench
+
+Install [https://dev.mysql.com/doc/workbench/en/wb-installing-linux.html](https://dev.mysql.com/doc/workbench/en/wb-installing-linux.html)
+
+or use Docker:
+
+```
+docker-compose -f docker/mysql-workbench.yml up -d
+```
+
+To stop it and remove the container, run:
+
+```
+docker-compose -f docker/mysql-workbench.yml down
+```
+
+The application can be accessed at:
+
+`http://localhost:3000/`
+
+By default the user/pass is abc/abc, if you change your password or want to login manually to the GUI session for any reason use the following link:
+
+`http://localhost:3000/?login=true`
